@@ -1,0 +1,13 @@
+Script started on Sun 21 Mar 2021 12:58:54 PM EDT
+]0;mfertig@sol28:~/repoHW/Repo1[?1034h[mfertig@sol28 Repo1]$ git init
+Initialized empty Git repository in /users1/st/mfertig/repoHW/Repo1/.git/
+]0;mfertig@sol28:~/repoHW/Repo1[mfertig@sol28 Repo1]$ echo "hello" > README.MD[K[Kmd
+]0;mfertig@sol28:~/repoHW/Repo1[mfertig@sol28 Repo1]$ git add READme[K[K/[KME.md
+]0;mfertig@sol28:~/repoHW/Repo1[mfertig@sol28 Repo1]$ git commit - [Km "first commit:[K"
+[master (root-commit) 0880908] first commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+]0;mfertig@sol28:~/repoHW/Repo1[mfertig@sol28 Repo1]$ exit
+exit
+
+Script done on Sun 21 Mar 2021 01:00:17 PM EDT
