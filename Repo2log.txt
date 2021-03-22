@@ -1,0 +1,81 @@
+Script done on Mon 22 Mar 2021 03:25:37 AM EDT
+[mfertig@sol28 repo2]$ 2R0;136;0cScript started on Mon 22 Mar 2021 03:15:29 AM EDT
+[mfertig@sol28 repo2]$ svn co https://github.com/SeraphMichael1/subversion-test-repo.git
+A    subversion-test-repo.git/branches
+A    subversion-test-repo.git/trunk
+A    subversion-test-repo.git/trunk/README.md
+Checked out revision 3.
+[mfertig@sol28 repo2]$ cd subversion-test-repo.git
+[mfertig@sol28 subversion-test-repo.git]$ cd trunk
+[mfertig@sol28 trunk]$ ls
+README.md
+[mfertig@sol28 trunk]$ cd ~
+[mfertig@sol28 ~]$ cp HelloWorld.java repoHW/repo2/subversion-test-repo.git/trunk
+[mfertig@sol28 ~]$ cd repoHW/repo2/subversion-test-repo.git/trunk
+[mfertig@sol28 trunk]$ ls
+HelloWorld.java  README.md
+[mfertig@sol28 trunk]$ svn status
+?       HelloWorld.java
+[mfertig@sol28 trunk]$ svn add Helloworld.java
+svn: warning: W155010: '/users1/st/mfertig/repoHW/repo2/subversion-test-repo.git/trunk/Helloworld.java' not found
+svn: E200009: Could not add all targets because some targets don't exist
+svn: E200009: Illegal target for the requested operation
+[mfertig@sol28 trunk]$ svn add HelloWorld.java
+A         HelloWorld.java
+[mfertig@sol28 trunk]$ svn status
+A       HelloWorld.java
+[mfertig@sol28 trunk]$ svn commit -m "added file HelloWorld.java"
+Authentication realm: <https://github.com:443> GitHub
+Password for 'SeraphMichael1':
+
+-----------------------------------------------------------------------
+ATTENTION!  Your password for authentication realm:
+
+   <https://github.com:443> GitHub
+
+can only be stored to disk unencrypted!  You are advised to configure
+your system so that Subversion can store passwords encrypted, if
+possible.  See the documentation for details.
+
+You can avoid future appearances of this warning by setting the value
+of the 'store-plaintext-passwords' option to either 'yes' or 'no' in
+'/users1/st/mfertig/.subversion/servers'.
+-----------------------------------------------------------------------
+Store password unencrypted (yes/no)? no
+Adding         HelloWorld.java
+Transmitting file data .
+Committed revision 4.
+[mfertig@sol28 trunk]$ vim HelloWorld.java
+[mfertig@sol28 trunk]$ cat HelloWorld.java
+public class HelloWorld{
+        public static void main(String[] args){
+                System.out.println("Hello World! It's a Wonderful Day Isn't It?");
+        }
+}
+[mfertig@sol28 trunk]$ svn status
+M       HelloWorld.java
+[mfertig@sol28 trunk]$ svn commit -m "modified file HelloWorld.java - added text to output"
+Authentication realm: <https://github.com:443> GitHub
+Password for 'SeraphMichael1':
+
+-----------------------------------------------------------------------
+ATTENTION!  Your password for authentication realm:
+
+   <https://github.com:443> GitHub
+
+can only be stored to disk unencrypted!  You are advised to configure
+your system so that Subversion can store passwords encrypted, if
+possible.  See the documentation for details.
+
+You can avoid future appearances of this warning by setting the value
+of the 'store-plaintext-passwords' option to either 'yes' or 'no' in
+'/users1/st/mfertig/.subversion/servers'.
+-----------------------------------------------------------------------
+Store password unencrypted (yes/no)? no
+Sending        HelloWorld.java
+Transmitting file data .
+Committed revision 5.
+[mfertig@sol28 trunk]$ exit
+exit
+
+Script done on Mon 22 Mar 2021 03:25:37 AM EDT
