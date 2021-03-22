@@ -1,0 +1,64 @@
+Script started on Mon 22 Mar 2021 12:07:47 AM EDT
+[mfertig@sol28 repoHW]$ mkdir repo1
+[mfertig@sol28 repoHW]$ cd repo1
+[mfertig@sol28 repo1]$ git init
+Initialized empty Git repository in /users1/st/mfertig/repoHW/repo1/.git/
+[mfertig@sol28 repo1]$ echo "hello" > README.md
+[mfertig@sol28 repo1]$ ls
+README.md
+[mfertig@sol28 repo1]$ git add README.md
+[mfertig@sol28 repo1]$ git status
+# On branch master
+#
+# Initial commit
+#
+# Changes to be committed:
+#   (use "git rm --cached <file>..." to unstage)
+#
+#       new file:   README.md
+#
+[mfertig@sol28 repo1]$ git commit -m "added README file"
+[master (root-commit) da93bde] added README file
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+[mfertig@sol28 repo1]$ cd ~
+[mfertig@sol28 ~]$ cp HelloWorld.java repoHW/repo1
+[mfertig@sol28 ~]$ cd repoHW
+[mfertig@sol28 repoHW]$ cd repo1
+[mfertig@sol28 repo1]$ ls
+HelloWorld.java  README.md
+[mfertig@sol28 repo1]$ git add HelloWorld.java
+[mfertig@sol28 repo1]$ git status
+# On branch master
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#       new file:   HelloWorld.java
+#
+[mfertig@sol28 repo1]$ git commit -m "added HelloWorld Java program"
+[master ee61c60] added HelloWorld Java program
+ 1 file changed, 5 insertions(+)
+ create mode 100644 HelloWorld.java
+[mfertig@sol28 repo1]$ vim HelloWorld.java
+[mfertig@sol28 repo1]$ java HelloWorld
+Error: Could not find or load main class HelloWorld
+[mfertig@sol28 repo1]$ cat HelloWorld.java
+public class HelloWorld{
+        public static void main(String[] args){
+                System.out.println("Hello World! What a Wonderful Day!");}
+}
+[mfertig@sol28 repo1]$ git add HelloWorld.java
+[mfertig@sol28 repo1]$ git status
+# On branch master
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#       modified:   HelloWorld.java
+#
+[mfertig@sol28 repo1]$ git commit -m "modified HelloWorld"
+[master 8253e38] modified HelloWorld
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+[mfertig@sol28 repo1]$ exit
+exit
+
+Script done on Mon 22 Mar 2021 12:15:40 AM EDT
